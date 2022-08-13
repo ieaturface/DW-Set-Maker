@@ -2350,12 +2350,12 @@ var loomians = {
         weight: 153,
         height: 112,
         baseStats: {
-            hp: 50,
-            attack: 80,
+            hp: 70,
+            attack: 100,
             defense: 60,
-            attackR: 60,
+            attackR: 80,
             defenseR: 60,
-            speed: 140
+            speed: 120
         }
     },
 
@@ -4257,8 +4257,8 @@ var moves = {
 
     bonk: {
         name: "Bonk",
-        power: 100,
-        accuracy: 80,
+        power: 80,
+        accuracy: 100,
         type: "Metal",
         mr: "Melee",
         mr1: "Melee Attack",
@@ -4604,7 +4604,7 @@ var moves = {
 
     chaoticBolt: {
         name: "Chaotic Bolt",
-        power: 100,
+        power: 85,
         accuracy: 100,
         type: "Dark",
         mr: "Magic",
@@ -6314,7 +6314,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Opportunist", "Overbite", "Parry", "Pecking Order", "Poison Absorb", "Poisonous Skin", "Pollen Armor", "Possession", "Precise", "Premonition", "Puncture", "Rapier", "Reaper", "Reflective", "Rejuvenator", "Relentless", "Restless", "Retaliate",
                  "Routine", "Royal Decree", "Rubber Tissue", "Rugged", "Rule of Cool", "Rush", "Savage", "Scavenge", "Scorch", "Serenade", "Sharp Fangs", "Sharp Reflexes", "Sickly Sweet", "Slash Expert", "Spell Shield", "Spooky", "Spool", "Steam Guard", "Sticky",
                  "Stinky", "Stitching", "Stonefaced", "Storm Surge", "Stormwater", "Strong Armor", "Tangled", "Thievery", "Time Paralysis", "Time Stop", "Titanium Bucket", "True Power", "Trump Card", "Unbreakable", "Unraveling", "Vengeance", "Virulent Venom",
-                 "Vitality", "Ward", "Water Absorb", "Whimsical", "Wish For Wealth", "Wish For Experience", "Wish For Power", "Hunter", "Marked Territory", "Courteous", "Hard Candy", "Envy", "Covetous", "Ramming Speed", "Chef", "Accelerate"];
+                 "Vitality", "Ward", "Water Absorb", "Whimsical", "Wish For Wealth", "Wish For Experience", "Wish For Power", "Hunter", "Marked Territory", "Courteous", "Hard Candy", "Envy", "Covetous", "Ramming Speed", "Chef", "Accelerate", "Tainted"];
 
 var typeModAbilities = {
     adipose: {
