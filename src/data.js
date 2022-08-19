@@ -476,9 +476,9 @@ var loomians = {
             hp: 100,
             attack: 86,
             defense: 65,
-            attackR: 85,
+            attackR: 45,
             defenseR: 110,
-            speed: 45
+            speed: 73
         }
     },
 
@@ -1406,7 +1406,7 @@ var loomians = {
         height: 32,
         baseStats: {
             hp: 80,
-            attack: 95,
+            attack: 90,
             defense: 60,
             attackR: 90,
             defenseR: 80,
@@ -1639,10 +1639,10 @@ var loomians = {
         baseStats: {
             hp: 80,
             attack: 75,
-            defense: 75,
+            defense: 85,
             attackR: 80,
             defenseR: 100,
-            speed: 60
+            speed: 70
         }
     },
 
@@ -2113,7 +2113,7 @@ var loomians = {
 
     medikrow: {
         name: "Medikrow",
-        types: ["Dark", "Air"],
+        types: ["Dark", "Poison"],
         weight: 79,
         height: 62,
         baseStats: {
@@ -2847,8 +2847,8 @@ var moves = {
 
     fireball: {
         name: "Fireball",
-        power: 110,
-        accuracy: 85,
+        power: 85,
+        accuracy: 100,
         type: "Fire",
         mr: "Magic",
         mr1: "Ranged Attack",
@@ -3446,7 +3446,7 @@ var moves = {
     airStrike: {
         name: "Air Strike",
         power: 60,
-        accuracy: 90,
+        accuracy: 100,
         type: "Air",
         mr: "Magic",
         mr1: "Ranged Attack",
@@ -3504,6 +3504,28 @@ var moves = {
         mr1: "Melee Attack",
         mr2: "Melee Defense",
         priority: true
+    },
+
+    peck: {
+        name: "Peck",
+        power: 40,
+        accuracy: 100,
+        type: "Air",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
+    hitNRun: {
+        name: "Hit-n-Run",
+        power: 70,
+        accuracy: 100,
+        type: "Air",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
     },
 
     noseDive: {
@@ -3737,7 +3759,6 @@ var moves = {
         mr: "Melee",
         mr1: "Melee Attack",
         mr2: "Melee Defense",
-        contact: true
     },
 
     rumblingCharge: {
@@ -4617,7 +4638,7 @@ var moves = {
 
     chaoticBolt: {
         name: "Chaotic Bolt",
-        power: 85,
+        power: 75,
         accuracy: 100,
         type: "Dark",
         mr: "Magic",
@@ -4683,7 +4704,7 @@ var moves = {
 
     darkSlash: {
         name: "Dark Slash",
-        power: 80,
+        power: 75,
         accuracy: 90,
         type: "Dark",
         mr: "Melee",
@@ -4753,7 +4774,7 @@ var moves = {
 
     toxicBomb: {
         name: "Toxic Bomb",
-        power: 65,
+        power: 55,
         accuracy: 100,
         type: "Poison",
         mr: "Magic",
@@ -4825,9 +4846,9 @@ var moves = {
         power: 80,
         accuracy: 100,
         type: "Poison",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
+        mr: "Magic",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
         secondaryEffect: true
     },
 
@@ -5438,6 +5459,14 @@ var moves = {
 
     shiftingWinds: {
         name: "Shifting Winds",
+        power: 0,
+        accuracy: 100,
+        type: "Air",
+        mr: "Support"
+    },
+
+    quickThinking: {
+        name: "Quick Thinking",
         power: 0,
         accuracy: 100,
         type: "Air",
@@ -6238,7 +6267,7 @@ var types = {
 
     light: {
         weaknesses: ["dark", "plant"],
-        resistances: [],
+        resistances: ["light"],
         immunities: ["spirit"],
         otherName: "shine"
     },
@@ -6259,7 +6288,7 @@ var types = {
 
     metal: {
         weaknesses: ["fire", "earth", "melee"],
-        resistances: ["air", "insect", "metal", "basic", "ice", "mind", "plant"],
+        resistances: ["air", "insect", "metal", "basic", "ice", "mind", "plant", "beast"],
         immunities: ["poison"],
         otherName: "metalic"
     },
@@ -6286,7 +6315,7 @@ var types = {
     },
 
     mind: {
-        weaknesses: ["dark", "insect", "spirit", "beast", "food"],
+        weaknesses: ["dark", "insect", "spirit", "food"],
         resistances: ["mind", "melee"],
         immunities: [],
         otherName: "mental"
@@ -6307,7 +6336,7 @@ var types = {
     },
 
     crystal: {
-        weaknesses: ["earth", "melee", "metal"],
+        weaknesses: ["earth", "melee", "metal", "mind"],
         resistances: ["fire", "spark", "light", "spirit", "mythic"],
         immunities: ["poison"],
         otherName: "crystal"
@@ -6335,7 +6364,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Opportunist", "Overbite", "Parry", "Pecking Order", "Poison Absorb", "Poisonous Skin", "Pollen Armor", "Possession", "Precise", "Premonition", "Puncture", "Rapier", "Reaper", "Reflective", "Rejuvenator", "Relentless", "Restless", "Retaliate",
                  "Routine", "Royal Decree", "Rubber Tissue", "Rugged", "Rule of Cool", "Rush", "Savage", "Scavenge", "Scorch", "Serenade", "Sharp Fangs", "Sharp Reflexes", "Sickly Sweet", "Slash Expert", "Spell Shield", "Spooky", "Spool", "Steam Guard", "Sticky",
                  "Stinky", "Stitching", "Stonefaced", "Storm Surge", "Stormwater", "Strong Armor", "Tangled", "Thievery", "Time Paralysis", "Time Stop", "Titanium Bucket", "True Power", "Trump Card", "Unbreakable", "Unraveling", "Vengeance", "Virulent Venom",
-                 "Vitality", "Ward", "Water Absorb", "Whimsical", "Wish For Wealth", "Wish For Experience", "Wish For Power", "Hunter", "Marked Territory", "Courteous", "Hard Candy", "Envy", "Covetous", "Ramming Speed", "Chef", "Accelerate", "Tainted"];
+                 "Vitality", "Ward", "Water Absorb", "Whimsical", "Wish For Wealth", "Wish For Experience", "Wish For Power", "Hunter", "Marked Territory", "Courteous", "Hard Candy", "Envy", "Covetous", "Ramming Speed", "Chef", "Accelerate", "Tainted", "Contagion"];
 
 var typeModAbilities = {
     adipose: {
