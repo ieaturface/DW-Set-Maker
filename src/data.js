@@ -3625,9 +3625,9 @@ var moves = {
 
     taintedWater: {
         name: "Tainted Water",
-        power: 90,
-        accuracy: 75,
-        type: "Poison",
+        power: 80,
+        accuracy: 100,
+        type: "Water",
         mr: "Magic",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
@@ -3922,7 +3922,7 @@ var moves = {
 
     lightningKicks: {
         name: "Lightning Kicks",
-        power: 25,
+        power: 20,
         accuracy: 90,
         type: "Spark",
         mr: "Melee",
@@ -4777,7 +4777,8 @@ var moves = {
         mr: "Magic",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
-        secondaryEffect: true
+        secondaryEffect: true,
+        priority: true
     },
 
     auroraFlash: {
@@ -4984,7 +4985,7 @@ var moves = {
 
     mineralCannon: {
         name: "Mineral Cannon",
-        power: 90,
+        power: 85,
         accuracy: 100,
         type: "Metal",
         mr: "Magic",
@@ -7147,7 +7148,7 @@ var types = {
 
     spark: {
         weaknesses: ["crystal", "earth"],
-        resistances: ["spark", "metal", "air", "light"],
+        resistances: ["spark", "metal", "air", "light", "beast"],
         immunities: [],
         otherName: "volt"
     },
@@ -7268,7 +7269,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Vitality", "Ward", "Water Absorb", "Whimsical", "Wish For Wealth", "Wish For Experience", "Wish For Power", "Hunter", "Marked Territory", "Courteous", "Hard Candy", "Envy", "Covetous", "Ramming Speed", "Chef", "Accelerate", "Tainted", "Contagion",
                  "Moratorium", "Levitate", "Razor Skin", "Crispy", "Viscosity", "Robust", "Ugly", "Refresh", "Snailspeed", "Second Wind", "Dauntless", "Sand Surge", "Spellcaster", "Merciless", "Botulism", "Scarf Down", "Jelly Enhancer", "Poison Precipitation", "Light Orb",
                  "Insatiable Greed", "Splintered Shards", "Confidence", "Foam Guard", "Caliginous", "Dust Dash", "Dust Storm", "Sand Screen", "Tar Body", "Crude", "Oil Spill", "Antivenom", "Berry Good", "Seed Defense", "Sugar Coating", "Entangle", "Guardian",
-                 "Owolspeed", "The Flock", "Divine Beast"];
+                 "Owolspeed", "The Flock", "Divine Beast", "Vocalist", "Trickster", "Misery Guard"];
 
 var typeModAbilities = {
     adipose: {
