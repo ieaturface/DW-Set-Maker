@@ -2871,11 +2871,42 @@ var loomians = {
         }
     },
 
+    minjoule: {
+        name: "Minjoule",
+        types: ["Spark", "Beast"],
+        finalEvo: false,
+        weight: 24,
+        height: 33,
+        baseStats: {
+            hp: 63,
+            attack: 72,
+            defense: 61,
+            attackR: 58,
+            defenseR: 53,
+            speed: 51
+        }
+    },
+
+    riptorvent: {
+        name: "Riptorvent",
+        types: ["Spark", "Beast"],
+        weight: 78,
+        height: 61,
+        baseStats: {
+            hp: 91,
+            attack: 102,
+            defense: 99,
+            attackR: 83,
+            defenseR: 88,
+            speed: 57
+        }
+    },
+
     jellupy: {
         name: "Jellupy",
         types: ["Food", "Metal"],
-        weight: 52,
-        height: 46,
+        weight: 11,
+        height: 18,
         baseStats: {
             hp: 75,
             attack: 85,
@@ -3551,7 +3582,7 @@ var moves = {
 
     fieryBite: {
         name: "Fiery Bite",
-        power: 70,
+        power: 65,
         accuracy: 90,
         type: "Fire",
         mr: "Melee",
@@ -4025,7 +4056,7 @@ var moves = {
 
     electroSlash: {
         name: "Electro Slash",
-        power: 75,
+        power: 80,
         accuracy: 100,
         type: "Spark",
         mr: "Melee",
@@ -4050,7 +4081,7 @@ var moves = {
 
     electroBite: {
         name: "Electro Bite",
-        power: 70,
+        power: 65,
         accuracy: 90,
         type: "Spark",
         mr: "Melee",
@@ -4064,6 +4095,18 @@ var moves = {
     electroPunch: {
         name: "Electro Punch",
         power: 70,
+        accuracy: 100,
+        type: "Spark",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true,
+        secondaryEffect: true
+    },
+
+    cracklingStatic: {
+        name: "Crackling Static",
+        power: 30,
         accuracy: 100,
         type: "Spark",
         mr: "Melee",
@@ -4898,6 +4941,17 @@ var moves = {
         bite: true
     },
 
+    devour: {
+        name: "Devour",
+        power: 75,
+        accuracy: 100,
+        type: "Food",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true,
+    },
+
     abyssBreaker: {
         name: "Abyss Breaker",
         power: 100,
@@ -4966,7 +5020,7 @@ var moves = {
 
     flashingStrike: {
         name: "Flashing Strike",
-        power: 75,
+        power: 80,
         accuracy: 100,
         type: "Light",
         mr: "Melee",
@@ -5429,7 +5483,7 @@ var moves = {
 
     icyBite: {
         name: "Icy Bite",
-        power: 70,
+        power: 65,
         accuracy: 100,
         type: "Ice",
         mr: "Melee",
@@ -5501,7 +5555,7 @@ var moves = {
 
     icySlash: {
         name: "Icy Slash",
-        power: 90,
+        power: 80,
         accuracy: 100,
         type: "Ice",
         mr: "Melee",
@@ -5545,8 +5599,8 @@ var moves = {
 
     siphonSoul: {
         name: "Siphon Soul",
-        power: 100,
-        accuracy: 70,
+        power: 70,
+        accuracy: 100,
         type: "Dark",
         mr: "Magic",
         mr1: "Ranged Attack",
@@ -6958,6 +7012,16 @@ var helmets = {
         speed: 0,
     },
 
+    'npc buff': {
+        name: "NPC Buff",
+        health: 8,
+        attack: 8,
+        defense: 8,
+        mAttack: 8,
+        mDefense: 8,
+        speed: 8,
+    },
+
     'smoldering hood': {
         name: "Smoldering Hood",
         health: -6,
@@ -7078,6 +7142,16 @@ var amulets = {
         mAttack: 0,
         mDefense: 0,
         speed: 0,
+    },
+
+    'npc buff': {
+        name: "NPC Buff",
+        health: 8,
+        attack: 8,
+        defense: 8,
+        mAttack: 8,
+        mDefense: 8,
+        speed: 8,
     },
 
     'swag juice': {
@@ -7241,6 +7315,16 @@ var artifacts = {
         mAttack: 0,
         mDefense: 0,
         speed: 0,
+    },
+
+    'npc buff': {
+        name: "NPC Buff",
+        health: 8,
+        attack: 8,
+        defense: 8,
+        mAttack: 8,
+        mDefense: 8,
+        speed: 8,
     },
 
     'oakwood staff': {
@@ -7536,7 +7620,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Vitality", "Ward", "Water Absorb", "Whimsical", "Wish For Wealth", "Wish For Experience", "Wish For Power", "Hunter", "Marked Territory", "Courteous", "Hard Candy", "Envy", "Covetous", "Ramming Speed", "Chef", "Accelerate", "Tainted", "Contagion",
                  "Moratorium", "Levitate", "Razor Skin", "Crispy", "Viscosity", "Robust", "Ugly", "Refresh", "Snailspeed", "Second Wind", "Dauntless", "Sand Surge", "Spellcaster", "Merciless", "Botulism", "Scarf Down", "Jelly Enhancer", "Poison Precipitation", "Light Orb",
                  "Insatiable Greed", "Splintered Shards", "Confidence", "Foam Guard", "Caliginous", "Dust Dash", "Dust Storm", "Sand Screen", "Tar Body", "Crude", "Oil Spill", "Antivenom", "Berry Good", "Seed Defense", "Sugar Coating", "Entangle", "Guardian",
-                 "Owolspeed", "The Flock", "Divine Beast", "Vocalist", "Trickster", "Misery Guard", "Nimbostratus", "Skyborn", "Nihil"];
+                 "Owolspeed", "The Flock", "Divine Beast", "Vocalist", "Trickster", "Misery Guard", "Nimbostratus", "Skyborn", "Nihil", "Alacrity", "Turbulent"];
 
 var typeModAbilities = {
     adipose: {
