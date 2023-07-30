@@ -416,7 +416,7 @@ var loomians = {
         height: 38,
         baseStats: {
             hp: 107,
-            attack: 98,
+            attack: 88,
             defense: 75,
             attackR: 80,
             defenseR: 80,
@@ -3504,6 +3504,23 @@ var loomians = {
         }
     },
 
+    'bubbull-awakened': {
+        name: "Bubbull-Awakened",
+        types: ["Water", "Earth"],
+        weight: 1806,
+        height: 92,
+        ability: "Melting Point",
+        item: "Bubbull Rune",
+        baseStats: {
+            hp: 95,
+            attack: 120,
+            defense: 125,
+            attackR: 100,
+            defenseR: 100,
+            speed: 65
+        }
+    },
+
     skoplet: {
         name: "Skoplet",
         types: ["Water", "Insect"],
@@ -3635,11 +3652,11 @@ var loomians = {
         weight: 254,
         height: 71,
         baseStats: {
-            hp: 91,
+            hp: 76,
             attack: 78,
-            defense: 97,
+            defense: 102,
             attackR: 113,
-            defenseR: 101,
+            defenseR: 102,
             speed: 58
         }
     },
@@ -9352,7 +9369,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Owolspeed", "The Flock", "Divine Beast", "Vocalist", "Trickster", "Misery Guard", "Nimbostratus", "Skyborn", "Nihil", "Alacrity", "Turbulent", "Resolve", "Desert Body", "Ferocity", "Tenacious", "Vigor", "Elegance", "Bandit", "Outboxer", "Bulwark",
                  "Resilience", "Lithe", "Extinguisher", "Efficient Proxy", "Superluminal", "Bypass", "Reformation", "Daring Devil", "Bludgeon", "Revival", "Calm", "Jester Privilege", "Vampire", "Elemental Resist", "Eruption", "Apex", "Spore Armor", "Bird of Prey",
                  "Toxicity", "Archmage", "Delicate", "The Fungus", "Annihilation", "Cardinal Sins", "Spiteful", "Downpour", "Refreshed Resilience", "Analytical", "Luminosity", "Ambrosia", "Pugilist", "Heavy Storms", "Nimble", "Vicious", "Annoying Insect", "Rain Power",
-                 "Burning Body", "Brainwash", "Bubble Blaster", "Battery Charge", "Overwhelm", "High Value Target", "Helios", "Combustion", "Harlequin"];
+                 "Burning Body", "Brainwash", "Bubble Blaster", "Battery Charge", "Overwhelm", "High Value Target", "Helios", "Combustion", "Harlequin", "Melting Point"];
 
 var typeModAbilities = {
     adipose: {
@@ -9474,6 +9491,12 @@ var typeModAbilities = {
         typeModifier: { type: "Water", modifier: 1.5 },
         powerMod: true
     },
+
+    meltingPoint: {
+        name: "Melting Point",
+        typeModifier: { type: "Ice", modifier: 0 },
+        powerMod: false
+    },
     
 }
 
@@ -9494,4 +9517,4 @@ for (let doo in loomians) {
 
 var sets = [];
 
-var changelog = "Balance Changes + some Oasis Doodles.";
+var changelog = "Added Awakened Bubbull.";
