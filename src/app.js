@@ -54,8 +54,7 @@ function saveSets() {
             break;
         }
         let set = createSet(allElements[row]);
-        sets[set.setName] = set;
-        console.log(set.name);
+        sets[row] = set;
     } 
 
     if (Object.keys(sets).length != 0) {
