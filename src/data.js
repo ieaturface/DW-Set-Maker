@@ -2517,12 +2517,12 @@ var loomians = {
         weight: 34,
         height: 58,
         baseStats: {
-            hp: 75,
+            hp: 80,
             attack: 110,
             defense: 80,
             attackR: 81,
             defenseR: 70,
-            speed: 99
+            speed: 93
         }
     },
 
@@ -2657,11 +2657,11 @@ var loomians = {
         weight: 15,
         height: 20,
         baseStats: {
-            hp: 60,
+            hp: 80,
             attack: 45,
             defense: 115,
             attackR: 95,
-            defenseR: 110,
+            defenseR: 120,
             speed: 45
         }
     },
@@ -2672,11 +2672,11 @@ var loomians = {
         weight: 2,
         height: 8,
         baseStats: {
-            hp: 50,
+            hp: 70,
             attack: 50,
             defense: 60,
             attackR: 125,
-            defenseR: 80,
+            defenseR: 90,
             speed: 100
         }
     },
@@ -3337,6 +3337,24 @@ var loomians = {
         }
     },
 
+    'suomous-awakened': {
+        name: "Suomous-Awakened",
+        types: ["Melee"],
+        weight: 16,
+        height: 21,
+        ability: "Jab Cross",
+        item: "Suomous Rune",
+        baseStats: {
+            hp: 63,
+            attack: 135,
+            defense: 107,
+            attackR: 63,
+            defenseR: 88,
+            speed: 125
+        }
+    },
+
+
     megglit: {
         name: "Megglit",
         types: ["Spark"],
@@ -3445,6 +3463,21 @@ var loomians = {
             attackR: 45,
             defenseR: 120,
             speed: 50
+        }
+    },
+
+    finwick: {
+        name: "Finwick",
+        types: ["Water"],
+        weight: 20,
+        height: 24,
+        baseStats: {
+            hp: 60,
+            attack: 70,
+            defense: 35,
+            attackR: 70,
+            defenseR: 35,
+            speed: 80
         }
     },
 
@@ -3760,6 +3793,23 @@ var loomians = {
         }
     },
 
+    'hypnotl-awakened': {
+        name: "Hypnotl-Awakened",
+        types: ["Mind", "Plant"],
+        weight: 38,
+        height: 49,
+        ability: "Puffball",
+        item: "Hypnotl Antigen",
+        baseStats: {
+            hp: 85,
+            attack: 75,
+            defense: 97,
+            attackR: 124,
+            defenseR: 107,
+            speed: 100
+        }
+    },
+
     sobbuoy: {
         name: "Sobbuoy",
         types: ["Water", "Melee"],
@@ -3788,6 +3838,23 @@ var loomians = {
             attackR: 50,
             defenseR: 75,
             speed: 105
+        }
+    },
+
+    'vigimante-awakened': {
+        name: "Vigimante-Awakened",
+        types: ["Water", "Melee"],
+        weight: 36,
+        height: 49,
+        ability: "Ferocity",
+        item: "Vigimante Rune",
+        baseStats: {
+            hp: 78,
+            attack: 125,
+            defense: 95,
+            attackR: 60,
+            defenseR: 95,
+            speed: 115
         }
     },
 
@@ -5133,10 +5200,9 @@ var moves = {
         power: 60,
         accuracy: 100,
         type: "Basic",
-        mr: "Melee",
-        mr1: "Melee Attack",
-        mr2: "Melee Defense",
-        contact: true,
+        mr: "Magic",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
         secondaryEffect: true
     },
 
@@ -5317,7 +5383,7 @@ var moves = {
 
     incinerate: {
         name: "Incinerate",
-        power: 30,
+        power: 40,
         accuracy: 100,
         type: "Fire",
         mr: "Magic",
@@ -6336,12 +6402,13 @@ var moves = {
 
     shellCrash: {
         name: "Shell Crash",
-        power: 90,
+        power: 70,
         accuracy: 100,
         type: "Earth",
-        mr: "Magic",
-        mr1: "Ranged Attack",
-        mr2: "Ranged Defense",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true,
         secondaryEffect: true
     },
 
@@ -8221,6 +8288,14 @@ var moves = {
         mr: "Support"
     },
 
+    study: {
+        name: "Study",
+        power: 0,
+        accuracy: 100,
+        type: "Basic",
+        mr: "Support"
+    },
+
     armorBreak: {
         name: "Armor Break",
         power: 0,
@@ -9713,7 +9788,7 @@ var types = {
 
     spark: {
         weaknesses: ["crystal", "earth"],
-        resistances: ["spark", "metal", "air", "light", "beast"],
+        resistances: ["spark", "metal", "air", "beast"],
         immunities: [],
         otherName: "volt"
     },
@@ -9838,7 +9913,8 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Resilience", "Lithe", "Extinguisher", "Efficient Proxy", "Superluminal", "Bypass", "Reformation", "Daring Devil", "Bludgeon", "Revival", "Calm", "Jester Privilege", "Vampire", "Elemental Resist", "Eruption", "Apex", "Spore Armor", "Bird of Prey",
                  "Toxicity", "Archmage", "Delicate", "The Fungus", "Annihilation", "Cardinal Sins", "Spiteful", "Downpour", "Refreshed Resilience", "Analytical", "Luminosity", "Ambrosia", "Pugilist", "Heavy Storms", "Nimble", "Vicious", "Annoying Insect", "Rain Power",
                  "Burning Body", "Brainwash", "Bubble Blaster", "Battery Charge", "Overwhelm", "High Value Target", "Helios", "Combustion", "Harlequin", "Melting Point", "Puffball", "Sea Goddess Disciple", "Gaseous Form", "Avenger", "Secret Darkness", "Basic Care",
-                 "Hammer Claw", "Mental Momentum", "Mental Depletion", "Clueless", "Banana Peel", "Enfeeble", "Capricious", "Mischievous", "Oasis Deity", "Hirudotherapy", "Detox", "Speed of Swag", "Healthy Toxins", "Sand Swap", "Sand Shield", "Karna"];
+                 "Hammer Claw", "Mental Momentum", "Mental Depletion", "Clueless", "Banana Peel", "Enfeeble", "Capricious", "Mischievous", "Oasis Deity", "Hirudotherapy", "Detox", "Speed of Swag", "Healthy Toxins", "Sand Swap", "Sand Shield", "Karna", "Fish Outta Water",
+                 "Jab Cross",];
 
 var typeModAbilities = {
     adipose: {
@@ -9997,7 +10073,7 @@ var items = ["Used Crayons", "Lucky Pebble", "Ice Pack", "Used Timber", "Battery
              "Power Jelly", "Wake-Up Jelly", "Weird Jelly", "Frozen TV Dinner", "Sniper Scope", "Lighter", "Bubblegum", "Dark Chocolate", "Small Sprout", "Laminate", "Delicate Wing", "Cursed Cloak", "Gold Laminate", "Glasses", "Sickly Ooze", "Spiky Thorns",
              "Espresso", "Pretty Seashell", "Perfect Alloy", "Crooked Talon", "Moon Charm", "Refractive Prism", "Edible Storm in a Bottle", "Sandstorm in a Bottle", "Unwashed Plushie", "Magic Wand", "Lethal Ornament", "Empowered Ring", "Jetpack", "Decorative Fan",
              "Riot Shield", "Homemade Plush", "Refined Crystal", "Imbued Relic", "Corrosive Wand", "Stormy Wand", "Confectioner's Wand", "Blueprint", "Conductor's Baton", "Questionable Sludge", "Arid Wand", "Studded Fang", "Gauze Wrap", "Storm in a Bottle", "Sponge",
-             "Enchanted Sapphire", "Enchanted Ruby", "Enchanted Emerald", "Spirit Jar"];
+             "Enchanted Sapphire", "Enchanted Ruby", "Enchanted Emerald", "Spirit Jar", "Acid Storm in a Bottle", "Boomerang"];
 
 for (let ty in types) {
     items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Taffy");
@@ -10010,4 +10086,4 @@ for (let doo in loomians) {
 
 var sets = [];
 
-var changelog = "Season 1 Balance Patch.";
+var changelog = "Awakened Suomous and Vigimante added.";
