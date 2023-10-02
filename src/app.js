@@ -124,7 +124,7 @@ function createRow() {
     let itemDropdown = createItemyDropdown();
 
     let level = createInput(1, 100);
-    level.value = 100;
+    level.value = 50;
 
     let moveOne = createMoveDropdown();
     let moveTwo = createMoveDropdown();
