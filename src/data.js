@@ -4745,9 +4745,9 @@ var loomians = {
         },
         bitty: {
             hp: 100,
-            attack: 100,
+            attack: 80,
             defense: 30,
-            attackR: 100,
+            attackR: 80,
             defenseR: 30,
             speed: 30
         },
@@ -5695,8 +5695,8 @@ var loomians = {
         baseStats: {
             hp: 72,
             attack: 40,
-            defense: 112,
-            attackR: 140,
+            defense: 127,
+            attackR: 125,
             defenseR: 90,
             speed: 30
         }
@@ -6732,7 +6732,8 @@ var moves = {
         mr: "Melee",
         mr1: "Melee Attack",
         mr2: "Melee Defense",
-        contact: true
+        contact: true,
+        slash: true
     },
 
     plantSap: {
@@ -8884,7 +8885,7 @@ var moves = {
 
     malletCrush: {
         name: "Mallet Crush",
-        power: 50,
+        power: 80,
         accuracy: 100,
         type: "Dark",
         mr: "Melee",
@@ -11205,7 +11206,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Burning Body", "Brainwash", "Bubble Blaster", "Battery Charge", "Overwhelm", "High Value Target", "Helios", "Combustion", "Harlequin", "Melting Point", "Puffball", "Sea Goddess Disciple", "Gaseous Form", "Avenger", "Secret Darkness", "Basic Care",
                  "Hammer Claw", "Mental Momentum", "Mental Depletion", "Clueless", "Banana Peel", "Enfeeble", "Capricious", "Mischievous", "Oasis Deity", "Hirudotherapy", "Detox", "Speed of Swag", "Healthy Toxins", "Sand Swap", "Sand Shield", "Karna", "Fish Outta Water",
                  "Jab Cross", "Crystallization", "Mind Games", "Paper Cut", "Acid Advance", "Fur Coat", "Your Meowjesty", "Trick or Treat", "Everlasting", "Revenant", "Warden", "Forbidden Knowledge", "Grounded", "Silly", "Goliath", "Naughty List", "Symbiosis",
-                 "Mushroom Maneuver", "Crowd Support", "Speedy Recovery", "Gift Giver", "Soul Fortification", "Clearcut Ore", "Split", "Soul Link", "Chivalry", "Tumble", "Paralyzing Agent", "Evasive", "Bee Arena", "Deterrent Sabre", "Illogical"];
+                 "Mushroom Maneuver", "Crowd Support", "Speedy Recovery", "Gift Giver", "Soul Fortification", "Clearcut Ore", "Split", "Soul Link", "Chivalry", "Tumble", "Paralyzing Agent", "Evasive", "Bee Arena", "Deterrent Sabre", "Illogical", "Gunk Spark", "Absorber"];
 
 var typeModAbilities = {
     adipose: {
@@ -11401,4 +11402,4 @@ for (let doo in loomians) {
 
 var sets = [];
 
-var changelog = "Icyridge Doodles added.";
+var changelog = "Fixed Bitty stats, changed Illogical and Meteor Launch scaling. Added Absorber.";
