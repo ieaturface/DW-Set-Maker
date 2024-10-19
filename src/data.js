@@ -4447,6 +4447,21 @@ var loomians = {
         }
     },
 
+    khaos: {
+        name: "Khaos",
+        types: ["Mythic"],
+        weight: 999,
+        height: 79,
+        baseStats: {
+            hp: 160,
+            attack: 125,
+            defense: 100,
+            attackR: 125,
+            defenseR: 100,
+            speed: 60
+        }
+    },
+
     glubbie: {
         name: "Glubbie",
         types: ["Poison", "Spirit"],
@@ -6314,6 +6329,111 @@ var loomians = {
         }
     },
 
+    vulcryst: {
+        name: "Vulcryst",
+        types: ["Dark", "Crystal"],
+        finalEvo: false,
+        weight: 15,
+        height: 25,
+        baseStats: {
+            hp: 50,
+            attack: 50,
+            defense: 50,
+            attackR: 75,
+            defenseR: 50,
+            speed: 100
+        }
+    },
+
+    noctoryx: {
+        name: "Noctoryx",
+        types: ["Dark", "Crystal"],
+        weight: 39,
+        height: 43,
+        baseStats: {
+            hp: 75,
+            attack: 80,
+            defense: 75,
+            attackR: 102,
+            defenseR: 80,
+            speed: 118
+        }
+    },
+
+    'morphiu-opiuchius': {
+        name: "Morphiu-Opiuchius",
+        types: ["Basic", "Mind"],
+        weight: 46,
+        height: 37,
+        baseStats: {
+            hp: 93,
+            attack: 83,
+            defense: 103,
+            attackR: 83,
+            defenseR: 103,
+            speed: 47
+        }
+    },
+
+    'morphiu-cancer': {
+        name: "Morphiu-Cancer",
+        types: ["Mind", "Water"],
+        weight: 46,
+        height: 37,
+        baseStats: {
+            hp: 84,
+            attack: 74,
+            defense: 74,
+            attackR: 104,
+            defenseR: 114,
+            speed: 62
+        }
+    },
+
+    'morphiu-gemini': {
+        name: "Morphiu-Gemini",
+        types: ["Mind", "Air"],
+        weight: 46,
+        height: 37,
+        baseStats: {
+            hp: 83,
+            attack: 103,
+            defense: 113,
+            attackR: 73,
+            defenseR: 73,
+            speed: 67
+        }
+    },
+
+    'morphiu-leo': {
+        name: "Morphiu-Leo",
+        types: ["Mind", "Fire"],
+        weight: 46,
+        height: 37,
+        baseStats: {
+            hp: 75,
+            attack: 105,
+            defense: 75,
+            attackR: 75,
+            defenseR: 87,
+            speed: 95
+        }
+    },
+
+    'morphiu-taurus': {
+        name: "Morphiu-Taurus",
+        types: ["Mind", "Earth"],
+        weight: 46,
+        height: 37,
+        baseStats: {
+            hp: 82,
+            attack: 102,
+            defense: 102,
+            attackR: 72,
+            defenseR: 72,
+            speed: 82
+        }
+    },
 
 };
 
@@ -6680,6 +6800,18 @@ var moves = {
         recoil: 1/4
     },
 
+    elementalClaws: {
+        name: "Elemental Claws",
+        power: 80,
+        accuracy: 100,
+        type: "Basic",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true,
+        slash: true
+    },
+
     pirouette: {
         name: "Pirouette",
         power: 0,
@@ -6943,7 +7075,8 @@ var moves = {
         type: "Water",
         mr: "Magic",
         mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
+        mr2: "Ranged Defense",
+        stat: {amount: -2, battle: "Offense", stat: "AttackR"}
     },
 
     tsunami: {
@@ -7077,7 +7210,6 @@ var moves = {
         mr: "Melee",
         mr1: "Melee Attack",
         mr2: "Melee Defense",
-        contact: true,
         punch: true,
         secondaryEffect: true
     },
@@ -7181,7 +7313,8 @@ var moves = {
         type: "Plant",
         mr: "Magic",
         mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
+        mr2: "Ranged Defense",
+        stat: {amount: -2, battle: "Offense", stat: "AttackR"}
     },
 
     wildGrowth: {
@@ -7621,6 +7754,18 @@ var moves = {
         mr2: "Melee Defense",
         contact: true,
         charging: true
+    },
+
+    steelCrusher: {
+        name: "Steel Crusher",
+        power: 75,
+        accuracy: 100,
+        type: "Beast",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true,
+        typeModifier: { type: "Metal", modifier: 4 }
     },
 
     ferociousOnslaught: {
@@ -8067,6 +8212,7 @@ var moves = {
         mr: "Magic",
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
+        stat: {amount: 1, battle: "Offense", stat: "AttackR"}
     },
 
     psychoCrush: {
@@ -8701,7 +8847,8 @@ var moves = {
         type: "Crystal",
         mr: "Magic",
         mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
+        mr2: "Ranged Defense",
+        stat: {amount: -2, battle: "Offense", stat: "AttackR"}
     },
 
     geodeSmash: {
@@ -9627,6 +9774,17 @@ var moves = {
     chemicalBreath: {
         name: "Chemical Breath",
         power: 80,
+        accuracy: 100,
+        type: "Basic",
+        mr: "Magic",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
+        secondaryEffect: true
+    },
+
+    curiousBeam: {
+        name: "Curious Beam",
+        power: 90,
         accuracy: 100,
         type: "Basic",
         mr: "Magic",
@@ -11728,7 +11886,8 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Hammer Claw", "Mental Momentum", "Mental Depletion", "Clueless", "Banana Peel", "Enfeeble", "Capricious", "Mischievous", "Oasis Deity", "Hirudotherapy", "Detox", "Speed of Swag", "Healthy Toxins", "Sand Swap", "Sand Shield", "Karna", "Fish Outta Water",
                  "Jab Cross", "Crystallization", "Mind Games", "Paper Cut", "Acid Advance", "Fur Coat", "Your Meowjesty", "Trick or Treat", "Everlasting", "Revenant", "Warden", "Forbidden Knowledge", "Grounded", "Silly", "Goliath", "Naughty List", "Symbiosis",
                  "Mushroom Maneuver", "Crowd Support", "Speedy Recovery", "Gift Giver", "Soul Fortification", "Clearcut Ore", "Split", "Soul Link", "Chivalry", "Tumble", "Paralyzing Agent", "Evasive", "Bee Arena", "Deterrent Sabre", "Illogical", "Gunk Spark", "Absorber",
-                 "Floaty", "Hardy", "Hydration", "Static Charge", "Mushboom", "Bug Zapper", "Filial Piety", "Brainfreeze", "Architect", "Amp It Up", "Reactive Shock", "Thermal Energy", "Corruption", "Hammer Time", "Bogdown", "Joltant", "Chlorobite"];
+                 "Floaty", "Hardy", "Hydration", "Static Charge", "Mushboom", "Bug Zapper", "Filial Piety", "Brainfreeze", "Architect", "Amp It Up", "Reactive Shock", "Thermal Energy", "Corruption", "Hammer Time", "Bogdown", "Joltant", "Chlorobite", "Resentment",
+                 "Almagest", "Chaos Theory"];
 
 var typeModAbilities = {
     adipose: {
@@ -11936,4 +12095,4 @@ for (let doo in loomians) {
 
 var sets = [];
 
-var changelog = "Balance Changes added.";
+var changelog = "Morphiu and Khaos added.";
