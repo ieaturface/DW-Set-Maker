@@ -6701,6 +6701,68 @@ var loomians = {
         }
     },
 
+    toxode: {
+        name: "Toxode",
+        types: ["Metal", "Poison"],
+        finalEvo: false,
+        weight: 45,
+        height: 36,
+        baseStats: {
+            hp: 50,
+            attack: 40,
+            defense: 75,
+            attackR: 80,
+            defenseR: 65,
+            speed: 30
+        }
+    },
+
+    hazination: {
+        name: "Hazination",
+        types: ["Metal", "Poison"],
+        weight: 97,
+        height: 56,
+        baseStats: {
+            hp: 100,
+            attack: 60,
+            defense: 95,
+            attackR: 115,
+            defenseR: 100,
+            speed: 50
+        }
+    },
+
+    fawnook: {
+        name: "Fawnook",
+        types: ["Basic"],
+        finalEvo: false,
+        weight: 3,
+        height: 26,
+        baseStats: {
+            hp: 50,
+            attack: 75,
+            defense: 60,
+            attackR: 40,
+            defenseR: 50,
+            speed: 75
+        }
+    },
+
+    taxideer: {
+        name: "Taxideer",
+        types: ["Basic", "Spirit"],
+        weight: 36,
+        height: 70,
+        baseStats: {
+            hp: 75,
+            attack: 110,
+            defense: 70,
+            attackR: 60,
+            defenseR: 80,
+            speed: 110
+        }
+    },
+
 
 };
 
@@ -9367,6 +9429,17 @@ var moves = {
         slash: true
     },
 
+    phantomRush: {
+        name: "Phantom Rush",
+        power: 75,
+        accuracy: 100,
+        type: "Spirit",
+        mr: "Melee",
+        mr1: "Melee Attack",
+        mr2: "Melee Defense",
+        contact: true
+    },
+
     hexblade: {
         name: "Hexblade",
         power: 65,
@@ -9954,6 +10027,16 @@ var moves = {
         mr1: "Ranged Attack",
         mr2: "Ranged Defense",
         secondaryEffect: true
+    },
+
+    canister: {
+        name: "Canister",
+        power: 75,
+        accuracy: 100,
+        type: "Poison",
+        mr: "Magic",
+        mr1: "Ranged Attack",
+        mr2: "Ranged Defense",
     },
 
     toxicBomb: {
@@ -10979,6 +11062,14 @@ var moves = {
         mr: "Support"
     },
 
+    compose: {
+        name: "Compose",
+        power: 0,
+        accuracy: 100,
+        type: "Mind",
+        mr: "Support"
+    },
+
     forcedRepetition: {
         name: "Forced Repetition",
         power: 0,
@@ -11935,6 +12026,15 @@ var artifacts = {
         speed: 0,
     },
 
+    'golden stick': {
+        name: "Golden Stick",
+        health: 0,
+        attack: 0,
+        defense: 0,
+        mAttack: 8,
+        mDefense: 0,
+        speed: 8,
+    },
 
     'crumpled water bottle': {
         name: "Crumpled Water Bottle",
@@ -12257,7 +12357,8 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Jab Cross", "Crystallization", "Mind Games", "Paper Cut", "Acid Advance", "Fur Coat", "Your Meowjesty", "Trick or Treat", "Everlasting", "Revenant", "Warden", "Forbidden Knowledge", "Grounded", "Silly", "Goliath", "Naughty List", "Symbiosis",
                  "Mushroom Maneuver", "Crowd Support", "Speedy Recovery", "Gift Giver", "Soul Fortification", "Clearcut Ore", "Split", "Soul Link", "Chivalry", "Tumble", "Paralyzing Agent", "Evasive", "Bee Arena", "Deterrent Sabre", "Illogical", "Gunk Spark", "Absorber",
                  "Floaty", "Hardy", "Hydration", "Static Charge", "Mushboom", "Bug Zapper", "Filial Piety", "Brainfreeze", "Architect", "Amp It Up", "Reactive Shock", "Thermal Energy", "Corruption", "Hammer Time", "Bogdown", "Joltant", "Chlorobite", "Resentment",
-                 "Almagest", "Chaos Theory", "Decay", "Barkenstein", "Puppeter", "Entertainer", "Lipid Scale", "Proboscus", "Grass Cloak", "Firestarter", "Aloe Vera", "Evil Glare", "Night Harbinger", "Holiday Spirit", "Tri-Snake", "Blightfrost", "Impale"];
+                 "Almagest", "Chaos Theory", "Decay", "Barkenstein", "Puppeter", "Entertainer", "Lipid Scale", "Proboscus", "Grass Cloak", "Firestarter", "Aloe Vera", "Evil Glare", "Night Harbinger", "Holiday Spirit", "Tri-Snake", "Blightfrost", "Impale",
+                 "Poison Substance", "Phasmophobia"];
 
 var typeModAbilities = {
     adipose: {
@@ -12472,4 +12573,4 @@ for (let doo in loomians) {
 
 var sets = [];
 
-var changelog = "Season 13 (for real this time) changes added.";
+var changelog = "Added Fawnook line.";
