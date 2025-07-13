@@ -3221,6 +3221,23 @@ var loomians = {
         }
     },
 
+    'fancyoon-awakened': {
+        name: "Fancyoon-Awakened",
+        types: ["Basic", "Poison"],
+        weight: 36,
+        height: 33,
+        ability: "Foul Welcome",
+        item: "Fancyoon Boa",
+        baseStats: {
+            hp: 80,
+            attack: 125,
+            defense: 110,
+            attackR: 100,
+            defenseR: 110,
+            speed: 60
+        }
+    },
+
     buoyanseal: {
         name: "Buoyanseal",
         types: ["Water", "Basic"],
@@ -3356,6 +3373,23 @@ var loomians = {
             attackR: 82,
             defenseR: 83,
             speed: 90
+        }
+    },
+
+    'jellupy-awakened': {
+        name: "Jellupy-Awakened",
+        types: ["Food", "Metal"],
+        weight: 11,
+        height: 18,
+        ability: "Jelly Sync",
+        item: "Jellupy Whisk",
+        baseStats: {
+            hp: 90,
+            attack: 110,
+            defense: 90,
+            attackR: 102,
+            defenseR: 93,
+            speed: 110
         }
     },
 
@@ -4793,9 +4827,9 @@ var loomians = {
         baseStats: {
             hp: 85,
             attack: 105,
-            defense: 135,
+            defense: 125,
             attackR: 125,
-            defenseR: 120,
+            defenseR: 110,
             speed: 56
         }
     },
@@ -5420,6 +5454,37 @@ var loomians = {
             attackR: 50,
             defenseR: 105,
             speed: 70
+        }
+    },
+
+    circhick: {
+        name: "Circhick",
+        types: ["Ice", "Spark"],
+        finalEvo: false,
+        weight: 9,
+        height: 14,
+        baseStats: {
+            hp: 58,
+            attack: 75,
+            defense: 48,
+            attackR: 70,
+            defenseR: 54,
+            speed: 60
+        }
+    },
+
+    arcwatt: {
+        name: "Arcwatt",
+        types: ["Ice", "Spark"],
+        weight: 4,
+        height: 60,
+        baseStats: {
+            hp: 75,
+            attack: 100,
+            defense: 65,
+            attackR: 90,
+            defenseR: 70,
+            speed: 105
         }
     },
 
@@ -6186,8 +6251,8 @@ var loomians = {
             attack: 130,
             defense: 110,
             attackR: 60,
-            defenseR: 60,
-            speed: 80
+            defenseR: 55,
+            speed: 75
         }
     },
 
@@ -7139,9 +7204,9 @@ var loomians = {
         height: 65,
         baseStats: {
             hp: 80,
-            attack: 130,
+            attack: 120,
             defense: 85,
-            attackR: 80,
+            attackR: 90,
             defenseR: 85,
             speed: 115
         }
@@ -9994,7 +10059,8 @@ var moves = {
         type: "Spirit",
         mr: "Magic",
         mr1: "Ranged Attack",
-        mr2: "Ranged Defense"
+        mr2: "Ranged Defense",
+        sound: true
     },
 
     whisper: {
@@ -12938,7 +13004,7 @@ var abilities = ["Adipose", "Air Current", "Anti-Paralysis", "Apathetic", "Appar
                  "Floaty", "Hardy", "Hydration", "Static Charge", "Mushboom", "Bug Zapper", "Filial Piety", "Brainfreeze", "Architect", "Amp It Up", "Reactive Shock", "Thermal Energy", "Corruption", "Hammer Time", "Bogdown", "Joltant", "Chlorobite", "Resentment",
                  "Almagest", "Chaos Theory", "Decay", "Barkenstein", "Puppeter", "Entertainer", "Lipid Scale", "Proboscus", "Grass Cloak", "Firestarter", "Aloe Vera", "Evil Glare", "Night Harbinger", "Holiday Spirit", "Tri-Snake", "Blightfrost", "Impale",
                  "Poison Substance", "Phasmophobia", "Florist", "Pollen Spread", "Flowerhaven", "To Arms!", "Kingly Aura", "Monarch", "Sovereign", "Unpredictable", "Last Laugh", "Impersonate", "Metabolize", "Static Purge", "Overcharge", "Thunder Gut", "Hydro Coating",
-                 "Iron Pincer", "Frostillery", "Reheat", "Steeped Spirit", "Signal Jammer", "Overgrowth Protocol", "Paragon Skin", "Flourish", "Lament"];
+                 "Iron Pincer", "Frostillery", "Reheat", "Steeped Spirit", "Signal Jammer", "Overgrowth Protocol", "Paragon Skin", "Flourish", "Lament", "Jelly Sync", "Hero Spark", "Foul Welcome"];
 
 var typeModAbilities = {
     adipose: {
@@ -13140,7 +13206,7 @@ var items = ["Used Crayons", "Lucky Pebble", "Ice Pack", "Used Timber", "Battery
              "Espresso", "Pretty Seashell", "Perfect Alloy", "Crooked Talon", "Moon Charm", "Refractive Prism", "Edible Storm in a Bottle", "Sandstorm in a Bottle", "Unwashed Plushie", "Magic Wand", "Lethal Ornament", "Empowered Ring", "Jetpack", "Decorative Fan",
              "Riot Shield", "Homemade Plush", "Refined Crystal", "Imbued Relic", "Corrosive Wand", "Stormy Wand", "Confectioner's Wand", "Blueprint", "Conductor's Baton", "Questionable Sludge", "Arid Wand", "Studded Fang", "Gauze Wrap", "Storm in a Bottle", "Sponge",
              "Enchanted Sapphire", "Enchanted Ruby", "Enchanted Emerald", "Spirit Jar", "Acid Storm in a Bottle", "Boomerang", "Jack in the Box", "Reflective Glass", "Ice Data", "Fire Data", "Spark Data", "Earth Data", "Match Box", "Bubble Wand", "Yo-yo",
-             "Nesting Doll", "Soothing Charm", "Heavy Blanket", "Plastic Fangs", "Emergency Call", "Onion", "Ruler", "Potassium Conduit", "Doomflower"];
+             "Nesting Doll", "Soothing Charm", "Heavy Blanket", "Plastic Fangs", "Emergency Call", "Onion", "Ruler", "Potassium Conduit", "Doomflower", "Void Jelly", "Loop Jelly", "Whirlwind Jelly", "Relay Jelly", "Gift Jelly", "Bell Jelly"];
 
 for (let ty in types) {
     items.push(ty.charAt(0).toUpperCase() + ty.slice(1) + " Taffy");
@@ -13153,4 +13219,4 @@ for (let doo in loomians) {
 
 var sets = [];
 
-var changelog = "Season 15 changes added.";
+var changelog = "Circhick line + Awakened Fancyoon added.";
